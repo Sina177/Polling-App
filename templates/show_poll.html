@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspect Poll Details</title>
+    <link rel="stylesheet" href="../static/show-poll.css" />
+  </head>
+  <body>
+    <div class="poll">
+      <h3>{{poll['poll']}}</h3>
+      <div class="options">
+        <div class="option-details">
+          <div class="vote-option">{{poll['option1']}}</div>
+          <a href="{{url_for('vote', id=poll.name, option=1)}}" class="vote-btn"
+            >Vote</a
+          >
+          <div class="num-votes">Votes: {{poll['votes1']}}</div>
+        </div>
+        <hr />
+        <div class="option-details">
+          <div class="vote-option">{{poll['option2']}}</div>
+          <a href="{{url_for('vote', id=poll.name, option=2)}}" class="vote-btn"
+            >Vote</a
+          >
+          <div class="num-votes">Votes: {{poll['votes2']}}</div>
+        </div>
+        <hr />
+        <div class="option-details">
+          <div class="vote-option">{{poll['option3']}}</div>
+          <a href="{{url_for('vote', id=poll.name, option=3)}}" class="vote-btn"
+            >Vote</a
+          >
+          <div class="num-votes">Votes: {{poll['votes3']}}</div>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="btn">
+      <a href="{{url_for('index')}}">Back</a>
+    </div>
+  </body>
+</html>

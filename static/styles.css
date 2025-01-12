@@ -1,0 +1,79 @@
+/* Moving Box Shadow */
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 10px darkblue;
+  }
+  50% {
+    box-shadow: 0 0 20px darkblue;
+  }
+  100% {
+    box-shadow: 0 0 10px darkblue;
+  }
+}
+
+body {
+  background-color: lightblue;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+
+h4 {
+  font-family: cursive;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  margin: 10px 0 50px 0;
+}
+
+.create-poll-container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.create-poll {
+  display: grid;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 15px;
+  width: 150px;
+  height: 20px;
+  border-radius: 25px;
+}
+
+.create-poll:hover {
+  transform: scale(1.01);
+}
+
+.polls-container {
+  display: grid;
+  grid-template-rows: repeat(100px);
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.polls {
+  text-decoration: none;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  width: 800px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  box-shadow: 0 0 10px darkblue;
+  text-align: center;
+  animation: shadowPulse 2s infinite;
+}

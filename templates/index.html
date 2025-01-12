@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polling App</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
+  <body>
+    <h3>Dynamic Polling Application</h3>
+    <h4>
+      Speak your mind. Vote, create, and explore polls that matter to you.
+    </h4>
+    <div class="polls-container">
+      {% for key, value in polls.iterrows()%}
+      <a href="{{url_for('polls', id=key)}}" class="polls">{{value['poll']}}</a>
+      {%endfor%}
+    </div>
+
+    <div class="create-poll-container">
+      <a href="{{url_for('create_poll')}}" class="create-poll"
+        >Create New Poll</a
+      >
+    </div>
+  </body>
+</html>
