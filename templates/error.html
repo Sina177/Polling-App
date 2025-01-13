@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='error.css') }}"
+    />
+  </head>
+  <body>
+    <div class="error-text">
+      <h1>Oops! You Cannot Vote More Than Once</h1>
+      <p>
+        It seems like you have already voted for this poll. Thank you for your
+        participation!
+      </p>
+    </div>
+    <div class="image">
+      <img src="{{ url_for('static', filename='error.png') }}" alt="Error" />
+    </div>
+    <div class="home-btn">
+      <a href="{{url_for('index')}}">Home</a>
+    </div>
+  </body>
+</html>

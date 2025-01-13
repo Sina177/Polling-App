@@ -43,7 +43,13 @@ def create_poll():
         option1 = request.form['option1']
         option2 = request.form['option2']
         option3 = request.form['option3']
-        polls_df.loc[max(polls_df.index.values + 1)] = [poll, option1, option2, option3, 0, 0, 0]
+
+        if polls_df.empty:
+            new_id = 1  # Start ID from 1
+        else:
+            new_id = max(polls_df.index.values) + 1  # Increment the max index
+
+        polls_df.loc[new_id] = [poll, option1, option2, option3, 0, 0, 0]
         polls_df.to_csv("polls.csv")
         return redirect(url_for("index"))
 
@@ -60,7 +66,7 @@ def vote(id, option):
 
         return response
     else:
-        return "Cannot vote more than once!e"
+        return render_template("error.html")
 
 
 

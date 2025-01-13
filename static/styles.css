@@ -75,5 +75,6 @@ h4 {
   border: 1px solid blue;
   box-shadow: 0 0 10px darkblue;
   text-align: center;
+  line-height: 30px;
   animation: shadowPulse 2s infinite;
 }

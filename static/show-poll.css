@@ -32,6 +32,10 @@ body {
   text-decoration: none;
 }
 
+.btn a:hover {
+  transform: scale(1.01);
+}
+
 h3 {
   margin: 5vh 0 2vh 0;
   height: 10vh;
@@ -61,7 +65,7 @@ h3 {
 
 .vote-option {
   height: 60px;
-  background-color: black;
+  background-color: rgb(0, 0, 68);
   color: white;
   text-align: center;
   line-height: 60px;
@@ -81,6 +85,7 @@ h3 {
   font-size: 20px;
   border: 1px solid black;
   border-radius: 25px;
+  cursor: default;
 }
 
 .vote-btn {
